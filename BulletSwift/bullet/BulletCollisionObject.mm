@@ -237,7 +237,7 @@
 
 - (void)forceActivationState:(BulletActivationState)activationState
 {
-  bullet_cast(self.ptr)->forceActivationState(activationState);
+  bullet_cast(self.ptr)->forceActivationState(static_cast<int>(activationState));
 }
 
 - (void)setActiveState:(BOOL)active

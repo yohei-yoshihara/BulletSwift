@@ -36,13 +36,13 @@ class MotionState : BulletMotionState {
 }
 
 class BulletSwiftTests: XCTestCase {
-
-    override func setUp() {
-    }
-
-    override func tearDown() {
-    }
-
+  
+  override func setUp() {
+  }
+  
+  override func tearDown() {
+  }
+  
   func test_HelloWorld() {
     let world = BulletWorld()
     world.gravity = vector3(0, -10, 0)

@@ -67,22 +67,22 @@
 
 - (void)setValue:(float)value forParam:(BulletConstraintParams)param
 {
-  bullet_cast(self.ptr)->setParam(param, value);
+  bullet_cast(self.ptr)->setParam(static_cast<int>(param), value);
 }
 
 - (void)setValue:(float)value forParam:(BulletConstraintParams)param andAxis:(int)axis
 {
-  bullet_cast(self.ptr)->setParam(param, value, axis);
+  bullet_cast(self.ptr)->setParam(static_cast<int>(param), value, axis);
 }
 
 - (float)valueForParam:(BulletConstraintParams)param
 {
-  return bullet_cast(self.ptr)->getParam(param);
+  return bullet_cast(self.ptr)->getParam(static_cast<int>(param));
 }
 
 - (float)valueForParam:(BulletConstraintParams)param andAxis:(int)axis
 {
-  return bullet_cast(self.ptr)->getParam(param, axis);
+  return bullet_cast(self.ptr)->getParam(static_cast<int>(param), axis);
 }
 
 - (void)setBreakingImpulseThreshold:(float)threshold

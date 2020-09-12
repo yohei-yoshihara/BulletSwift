@@ -38,7 +38,7 @@
                                             static_cast<int>(height),
                                             heightData,
                                             maxHeight,
-                                            up,
+                                            static_cast<int>(up),
                                             true, false);
     m_shape->setUserPointer((__bridge void *)self);
   }
